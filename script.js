@@ -95,7 +95,7 @@ function honk() {
 
 function shout() {
 	let shout = new Audio("audio/audio-shout.mp3");
-	// shout.play();
+	shout.play();
 	coolness -= 10;
 	updateView();
 }
@@ -120,6 +120,7 @@ function displayGraph(barID, number) {
 function checkVictory() {
 	if (coolness >= 100) {
 		location.reload();
+		window.alert("You won the game!");
 	}
 }
 function Lossgame() {
